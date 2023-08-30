@@ -2,6 +2,7 @@
 
 /**
 * is_full - Validates tree for fullness
+* @tree: Pointer to binary tree node
 * @ans: Result of validation
 * Return: Void
 */
@@ -36,6 +37,6 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 	is_full(tree, &ans);
 
-	return (ans); 
+	return (ans);
 }
 
