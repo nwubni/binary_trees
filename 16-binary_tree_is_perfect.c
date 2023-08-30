@@ -4,6 +4,7 @@
 * inorder - Inorder traversal of binary tree
 * @tree: Pointer to binary tree node
 * @leaves: Counts leaf nodes
+* @depth: Depth of tree
 * @height: Binary tree height
 * Return: Void
 */
