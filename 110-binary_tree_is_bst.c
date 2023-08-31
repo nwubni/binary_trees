@@ -34,6 +34,9 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	int ans = 1;
 	int prev = -1000;
 
+	if (!tree)
+		return (0);
+
 	inorder(tree, &prev, &ans);
 
 	return (ans);
