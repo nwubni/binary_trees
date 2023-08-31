@@ -1,6 +1,11 @@
 #include "binary_trees.h"
 
 /**
+* insert - Inserts node into bst
+* @tree: Pointer to binary tree root
+* @value: Value to insert
+* @dub: Indicates if there is value duplicate
+* Return: Void
 */
 void insert(bst_t **tree, binary_tree_t *value, int *dup)
 {
