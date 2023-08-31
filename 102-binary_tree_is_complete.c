@@ -22,7 +22,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	{
 		binary_tree_t *current = queue[front++];
 
-		half_full += (current->left && !current->right);
+		half_full += (current->left && !current->right) ||
+				(!current->left && current->right);
 
 		if ((!current->left && current->right) || half_full > 1)
 			return (0);
