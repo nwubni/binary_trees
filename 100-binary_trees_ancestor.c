@@ -38,6 +38,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	binary_tree_t *s_temp = (binary_tree_t *)second;
 	size_t temp;
 
+	/* Let f_temp always be deeper */
 	if (f_depth < s_depth)
 	{
 		f_temp = (binary_tree_t *)second;
@@ -47,12 +48,14 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		s_depth = temp;
 	}
 
+	/* Bring the two nodes to the same depth */
 	while (f_depth > s_depth)
 	{
 		f_temp = f_temp->parent;
 		f_depth--;
 	}
 
+	/* Compare nodes while moving up ancestral tree */
 	while (f_temp && s_temp)
 	{
 		if (f_temp == s_temp)
