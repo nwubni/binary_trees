@@ -25,11 +25,12 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 /**
 * binary_trees_ancestor - Finds  common ancestors of two nodes
 * @first: First node
-* @seconde: Second node
+* @second: Second node
 * Return: Pointer to common ancestor
 */
 
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+					const binary_tree_t *second)
 {
 	size_t f_depth = binary_tree_depth(first);
 	size_t s_depth = binary_tree_depth(second);
