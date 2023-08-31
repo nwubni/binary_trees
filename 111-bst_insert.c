@@ -4,7 +4,7 @@
 * insert - Inserts node into bst
 * @tree: Pointer to binary tree root
 * @value: Value to insert
-* @dub: Indicates if there is value duplicate
+* @dup: Indicates if there is value duplicate
 * Return: Void
 */
 void insert(bst_t **tree, binary_tree_t *value, int *dup)
@@ -20,7 +20,7 @@ void insert(bst_t **tree, binary_tree_t *value, int *dup)
 
 	if ((*tree)->n > value->n)
 	{
-		if(!(*tree)->left)
+		if (!(*tree)->left)
 		{
 			value->parent = *tree;
 			(*tree)->left = value;
@@ -30,8 +30,8 @@ void insert(bst_t **tree, binary_tree_t *value, int *dup)
 		insert(&(*tree)->left, value, dup);
 		return;
 	}
-	
-	if(!(*tree)->right)
+
+	if (!(*tree)->right)
 	{
 		value->parent = *tree;
 		(*tree)->right = value;
@@ -45,7 +45,7 @@ void insert(bst_t **tree, binary_tree_t *value, int *dup)
 * bst_insert - Inserts value into binary search tree
 * @tree: Binary tree root
 * @value: Value to insert
-* Return: Pointer to new node 
+* Return: Pointer to new node
 */
 
 bst_t *bst_insert(bst_t **tree, int value)
@@ -56,7 +56,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	if (!tree)
 	{
 		*tree = node;
-		return node;
+		return (node);
 	}
 
 	insert(tree, node, &dup);
